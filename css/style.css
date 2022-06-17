@@ -1,0 +1,136 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'montserrat',sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* navbar */
+/* sidebar */
+.menu-icon{
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.line{
+    width: 3rem;
+    height: .2rem;
+    background-color: #222;
+    margin-bottom: .6rem;
+    transition: width .5s;
+
+}
+
+.line-1,.line-3{
+     width: 2.3rem;
+}
+
+.menu-icon:hover .line{
+    width: 3rem;
+}
+
+.sidebar{
+    position: fixed;
+    width: 8rem;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.social-icons-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 28rem;
+    justify-content: space-evenly;
+
+}
+
+.social-icon-link{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #555;
+    transition: color .5s;
+}
+
+.social-icon-link:hover{
+    color: #fdd835;
+}
+
+.year{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+/* end of sidebar */
+/* end of navbar */
+
+/* header */
+.header{
+    margin-left: 8rem;
+    background: linear-gradient(to top,rgba(0,0,0,0.6),rgba(0,0,0,0.5)),url("../images/background-image.jpg") center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.brand{
+    display: flex;
+    cursor: pointer;
+}
+
+.brand-heading{
+    font-family: 'Josefin Sans',sans-serif;
+    font-size: 3rem;
+    color: #fdd835;
+    letter-spacing: .1rem;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70rem;
+    color: #ddd;
+}
+
+.banner-heading{
+    font-family: 'Josefin Sans',sans-serif;
+    font-size: 8rem;
+    font-weight: 400;
+}
+
+.banner-paragraph{
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 4rem;
+}
+
+.banner-btn{
+    width: 20rem;
+    padding: 1.2rem 2rem;
+    color: #333;
+    font-size: 2rem;
+    margin-top: 2rem;
+    border: .1rem solid #fdd835;
+    border-radius: 3rem;
+    background: linear-gradient(to right, #fff9c4,#fff176);
+}
+
+.banner-btn:hover{
+    background: linear-gradient(to left,#fff9c4,#fff176);
+}
+
+.banner-btn:active{
+    transform: translateY(.2rem);
+}
+/* end of header */
