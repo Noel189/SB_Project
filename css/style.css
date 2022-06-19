@@ -17,7 +17,7 @@ body{
 .container{
     display: grid;
     grid-template-columns: minmax(6rem,1fr) repeat(8,minmax(min-content,16rem)) minmax(6rem,1fr);
-    grid-template-rows: min-content 80vh min-content;
+    grid-template-rows: repeat(2,min-content) 80vh;
     row-gap: 1.6rem;
     margin-top: 1.6rem;
 }
@@ -89,7 +89,7 @@ body{
 /* banner */
 .banner{
     grid-column: 2/10;
-    grid-row: 2/3;
+    grid-row: 3/4;
     background-color: #444;
     position: relative;
 }
@@ -178,7 +178,7 @@ body{
 /* second navbar */
 .second-nav{
     grid-column: 2/10;
-    grid-row: 3/4;
+    grid-row: 2/3;
     margin-top: 1rem;
 }
 
