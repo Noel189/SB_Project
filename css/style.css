@@ -1,25 +1,66 @@
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'montserrat',sans-serif;
+body {
+  font-family: "montserrat", sans-serif;
+  background: url("../images/beauty-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* navbar */
 
-.container{
-    display: grid;
-    grid-template-columns: minmax(6rem,1fr) repeat(8,minmax(min-content,16rem)) minmax(6rem,1fr);
-    grid-template-rows: repeat(2,min-content);
-    row-gap: 1.6rem;
-    margin-top: 1.6rem;
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(
+      6rem,
+      1fr
+    );
+  grid-template-rows: repeat(2, min-content);
+  row-gap: 1.6rem;
+  margin-top: 1.6rem;
 }
 
+.first-nav {
+  grid-column: 2/6;
+  grid-row: 1/2;
+}
 
+.first-nav-list {
+  display: flex;
+  justify-content: space-between;
+  /* grid-template-columns: repeat(auto-fit,8rem); */
+  list-style: none;
+}
+
+.first-nav-link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.second-nav {
+  grid-column: 8/10;
+  grid-row: 1/2;
+}
+
+.second-nav-list {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+}
+
+.second-nav-link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #fff;
+}
