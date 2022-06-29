@@ -5,8 +5,7 @@ html {
 
 body {
   font-family: "montserrat", sans-serif;
-  background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("../images/background-image.jpg") center /cover
-
+  
 
 }
 
@@ -19,18 +18,22 @@ body {
 
 .container {
   display: grid;
+  height: 100vh;
   grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(
       6rem,
       1fr
     );
   grid-template-rows: repeat(2, min-content);
   row-gap: 1.6rem;
-  margin-top: 1.6rem;
+  /* margin-top: 1.6rem; */
+  background: linear-gradient(to right bottom,rgba(0,0,0,.1),rgba(0,0,0,.8)),url("../images/beauty-img-2.jpg") no-repeat center /cover
+
 }
 
 .first-nav {
   grid-column: 2/6;
   grid-row: 1/2;
+  margin-top: 1.6rem;
 }
 
 .first-nav-list {
@@ -49,6 +52,7 @@ body {
 .second-nav {
   grid-column: 8/10;
   grid-row: 1/2;
+  margin-top: 1.6rem;
 }
 
 .second-nav-list {
