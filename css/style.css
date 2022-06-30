@@ -5,8 +5,6 @@ html {
 
 body {
   font-family: "montserrat", sans-serif;
-  
-
 }
 
 * {
@@ -18,51 +16,100 @@ body {
 
 .container {
   display: grid;
-  height: 100vh;
-  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(16rem, 1fr)) minmax(
       6rem,
       1fr
     );
-  grid-template-rows: repeat(2, min-content);
-  row-gap: 1.6rem;
-  /* margin-top: 1.6rem; */
-  background: linear-gradient(to right bottom,rgba(0,0,0,.1),rgba(0,0,0,.8)),url("../images/beauty-img-2.jpg") no-repeat center /cover
-
+  grid-template-rows: repeat(2,min-content);
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),url("../images/beauty-img-2.jpg") no-repeat center / cover;
 }
 
-.first-nav {
-  grid-column: 2/6;
+.navbar {
+  grid-column: 2/10;
   grid-row: 1/2;
-  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+  position: fixed;
+  width: 100%;
+  padding: 1rem; 
+}
+.first-nav {
+  grid-column: 1/6;
+  grid-row: 1/2;
 }
 
 .first-nav-list {
   display: flex;
-  justify-content: space-between;
-  /* grid-template-columns: repeat(auto-fit,8rem); */
+  flex-wrap: wrap;
   list-style: none;
+  justify-content: space-between;
+  margin-left: 10rem;
+}
+
+.first-nav-link:hover {
+  color: #482a04;
 }
 
 .first-nav-link {
   text-decoration: none;
-  font-size: 1.8rem;
-  color: #fff;
+  font-size: 2rem;
+  color: #ff9800;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-weight: 400;
 }
 
 .second-nav {
-  grid-column: 8/10;
+  grid-column: 9/10;
   grid-row: 1/2;
-  margin-top: 1.6rem;
 }
 
 .second-nav-list {
+  list-style: none;
   display: flex;
   justify-content: end;
-  list-style: none;
+  margin-right: 10rem;
+  text-transform: uppercase;
 }
 
 .second-nav-link {
   text-decoration: none;
   font-size: 1.6rem;
-  color: #fff;
+  color: #ff9800;
+  transition: all 0.5s;
+  font-weight: 400;
+}
+
+.second-nav-link:hover {
+  color: #482a04;
+}
+
+.social-icons{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 100%;
+}
+
+.social-icons-list{
+  margin-top: 10rem;
+  list-style: none;
+   height: 40rem;
+   width: 8rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.social-icon{
+  text-decoration: none;
+  font-size: 2rem;
+  color: #ff9800;
+  transition: transform .3s;
+  font-weight: 400;
+}
+
+.social-icon:hover{
+ transform: rotateZ(360deg);
 }
