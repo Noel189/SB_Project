@@ -5,6 +5,7 @@ html {
 
 body {
   font-family: "montserrat", sans-serif;
+ background:  linear-gradient(to bottom right, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.8));
 }
 
 * {
@@ -16,13 +17,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(16rem, 1fr)) minmax(
-      6rem,
-      1fr
-    );
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(16rem, 1fr)) minmax( 6rem,1fr);
   grid-template-rows: repeat(2,min-content);
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),url("../images/beauty-img-2.jpg") no-repeat center / cover;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.8)),url("../images/beauty-img-2.jpg") no-repeat center / cover;
 }
 
 .navbar {
@@ -48,16 +46,16 @@ body {
 }
 
 .first-nav-link:hover {
-  color: #482a04;
+ color: #90a4ae
 }
 
 .first-nav-link {
   text-decoration: none;
   font-size: 2rem;
-  color: #ff9800;
+  color: #b0bec5;
   text-transform: uppercase;
   transition: all 0.5s;
-  font-weight: 400;
+  font-weight:400;
 }
 
 .second-nav {
@@ -76,26 +74,31 @@ body {
 .second-nav-link {
   text-decoration: none;
   font-size: 1.6rem;
-  color: #ff9800;
+  color: #b0bec5;
   transition: all 0.5s;
   font-weight: 400;
 }
 
 .second-nav-link:hover {
-  color: #482a04;
+  color: #90a4ae;
 }
 
 .social-icons{
   grid-column: 1/2;
-  grid-row: 2/3;
+  grid-row: 1/3;
   height: 100%;
+  width: 10rem;
+  /* background-color: #e0e0e0; */
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icons-list{
-  margin-top: 10rem;
   list-style: none;
    height: 40rem;
-   width: 8rem;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -105,11 +108,16 @@ body {
 .social-icon{
   text-decoration: none;
   font-size: 2rem;
-  color: #ff9800;
-  transition: transform .3s;
+  color: #b0bec5;
+  transition: all .5s;
   font-weight: 400;
 }
 
 .social-icon:hover{
- transform: rotateZ(360deg);
+ transform: rotateZ(30deg);
+ color: #90a4ae;
+}
+
+.second-nav-link i{
+  margin-right: .6rem;
 }
