@@ -5,7 +5,11 @@ html {
 
 body {
   font-family: "montserrat", sans-serif;
- background:  linear-gradient(to bottom right, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0.9));
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.9)
+  );
 }
 
 * {
@@ -17,80 +21,59 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(16rem, 1fr)) minmax( 6rem,1fr);
-  grid-template-rows: repeat(2,min-content);
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(16rem, 1fr)) minmax(
+      6rem,
+      1fr
+    );
+  grid-template-rows: repeat(2, min-content);
   height: 100vh;
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.8)),url("../images/beauty-img-2.jpg") no-repeat center / cover;
+  background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../images/beauty-img-2.jpg") no-repeat center / cover;
 }
 
-.navbar {
+.first-nav {
   grid-column: 2/10;
   grid-row: 1/2;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
-  position: fixed;
-  width: 100%;
-  padding: 1rem; 
-  margin-top: 1rem;
-}
-.first-nav {
-  grid-column: 3/5;
-  grid-row: 1/2;
+  margin-top: 1.6rem;
 }
 
 .first-nav-list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: space-between;
-  margin-left: 10rem;
-  font-weight: 400;
+  padding: 1rem;
+  border-top: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
 }
 
-.first-nav-link:hover {
- color: #1a237e
+.first-nav-list > .first-nav-item + .first-nav-item {
+  margin-left: 6rem;
+}
+
+.first-nav-list > .first-nav-item:last-child {
+  margin-left: auto;
 }
 
 .first-nav-link {
+  display: block;
   text-decoration: none;
   font-size: 2rem;
   color: #b0bec5;
   text-transform: uppercase;
   transition: all 0.5s;
-  font-weight:400;
+  padding: 0.5rem;
+  text-align: center;
 }
 
-.second-nav {
-  grid-column: 9/10;
-  grid-row: 1/2;
-}
-
-.second-nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: end;
-  margin-right: 10rem;
-  text-transform: uppercase;
-}
-
-.second-nav-link {
-  text-decoration: none;
-  font-size: 1.6rem;
-  color: #b0bec5;
-  transition: all 0.5s;
-  font-weight: 400;
-}
-
-.second-nav-link:hover {
-  color: #1a237e;
-}
-
-.social-icons{
+.social-icons {
   grid-column: 1/2;
   grid-row: 1/3;
   height: 100%;
   width: 10rem;
-  /* background-color: #e0e0e0; */
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -98,160 +81,158 @@ body {
   align-items: center;
 }
 
-.social-icons-list{
+.social-icons-list {
   list-style: none;
-   height: 40rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   align-items: center;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.social-icon{
+.social-icon {
   text-decoration: none;
   font-size: 2rem;
   color: #b0bec5;
-  transition: all .5s;
+  transition: all 0.5s;
   font-weight: 400;
 }
 
-.social-icon:hover{
- transform: rotateZ(30deg);
- color: #90a4ae;
+.social-icon:hover {
+  transform: rotateZ(30deg);
+  color: #90a4ae;
 }
 
-.second-nav-link i{
-  margin-right: .6rem;
+.second-nav-link i {
+  margin-right: 0.6rem;
 }
 
 /* signup login forms */
-.forms{
+.forms {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   /* background:  linear-gradient(to bottom right, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.4)); */
   padding: 2rem;
   box-sizing: border-box;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   /* opacity: 0.; */
   display: none;
 }
 
-.forms form{
+.forms form {
   width: 50rem;
   padding: 1rem;
 }
 
-.forms form input:not(.submit-btn){
+.forms form input:not(.submit-btn) {
   background-color: #fff;
   padding: 1.2rem;
-  margin: .3rem 0;
-  border: .2rem solid #eee;
+  margin: 0.3rem 0;
+  border: 0.2rem solid #eee;
   box-sizing: border-box;
 }
 
-.sl-btn{
+.sl-btn {
   display: flex;
 }
 
-.f-btn{
+.f-btn {
   flex: 0 1 50%;
   text-align: center;
   font-size: 1.8rem;
   padding: 1rem;
   background-color: #000;
   color: #fff;
-  border: .1rem solid #eee;
-  border-radius: .3rem;
+  border: 0.1rem solid #eee;
+  border-radius: 0.3rem;
   font-weight: 700;
 }
 
-.signup-form{
+.signup-form {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
 }
 
-.form-input-names{
+.form-input-names {
   display: flex;
 }
 
-.form-input-names  input{
+.form-input-names input {
   width: 50%;
 }
 
-.submit-btn{
+.submit-btn {
   width: 35%;
-  padding:1rem;
-  margin: .3rem 0;
+  padding: 1rem;
+  margin: 0.3rem 0;
   background-color: #0097a7;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: .1rem;
-  border-radius: .3rem;
+  letter-spacing: 0.1rem;
+  border-radius: 0.3rem;
   outline: none;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.form-input{
+.form-input {
   width: 100%;
 }
 
-.form-heading{
+.form-heading {
   color: #fff;
   font-size: 1.8rem;
-  margin-bottom: .6rem;
+  margin-bottom: 0.6rem;
   font-weight: 700;
 }
 
-.login-form{
+.login-form {
   display: flex;
 }
 
-.login-form input:not(.submit-btn){
+.login-form input:not(.submit-btn) {
   width: 100%;
 }
 
-#show-hide-forms:checked ~ .forms{
+#show-hide-forms:checked ~ .forms {
   display: block;
 }
 
-.login-form{
+.login-form {
   display: none;
-
 }
 
-.show-signup-form{
+.show-signup-form {
   color: #888;
   background-color: #000;
   pointer-events: none;
 }
 
-#show-form:checked ~ .sl-btn .show-login-form{
+#show-form:checked ~ .sl-btn .show-login-form {
   color: #888;
   background-color: #000;
   pointer-events: none;
 }
 
-#show-form:checked ~ .sl-btn .show-signup-form{
+#show-form:checked ~ .sl-btn .show-signup-form {
   color: #fff;
   background-color: #000;
   pointer-events: initial;
 }
 
-#show-form:checked ~ .signup-form{
+#show-form:checked ~ .signup-form {
   display: none;
 }
 
-#show-form:checked ~ .login-form{
+#show-form:checked ~ .login-form {
   display: block;
 }
 
-
-#show-hide-forms:checked ~ .container{
-        pointer-events: none;
-        opacity: .4;
+#show-hide-forms:checked ~ .container {
+  pointer-events: none;
+  opacity: 0.4;
 }
 /* end of signup login forms */
