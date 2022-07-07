@@ -16,7 +16,7 @@ $(()=>{
         pictureArray.push(myImage);
     }
 
-    $(".banner").css("background",`linear-gradient( to bottom right,rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.8)),url(${pictureArray[0].src}) no-repeat center / cover`);
+    $(".banner").css("background",`linear-gradient( to bottom right,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.5)),url(${pictureArray[0].src}) no-repeat center / cover`);
     changePictureOnTimer();
 }
 )

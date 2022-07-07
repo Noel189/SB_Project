@@ -7,8 +7,8 @@ body {
   font-family: "montserrat", sans-serif;
   background: linear-gradient(
     to bottom right,
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.9)
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
   );
 }
 
@@ -25,7 +25,7 @@ body {
       6rem,
       1fr
     );
-  grid-template-rows: min-content 90vh min-content;
+  grid-template-rows: min-content 90vh repeat(2,min-content);
 }
 
 .first-nav {
@@ -64,7 +64,7 @@ body {
   display: block;
   text-decoration: none;
   font-size: 2rem;
-  color: #b0bec5;
+  color: #311b92;
   text-transform: uppercase;
   transition: all 0.5s;
   padding: 0.5rem;
@@ -73,7 +73,7 @@ body {
 }
 
 .first-nav-link:hover{
-  color: #0097a7;
+  color: #cddc39;
 }
 
 .social-icons {
@@ -93,18 +93,19 @@ body {
   justify-content: space-around;
   align-items: center;
   padding-left: 0;
+ 
 }
 
 .social-icon {
   text-decoration: none;
   font-size: 2rem;
-  color: #b0bec5;
+  color: #311b92;
   transition: all 0.5s;
 }
 
 .social-icon:hover {
   transform: rotateZ(30deg);
-  color: #0097a7;
+  color: #cddc39;
 }
 
 /* signup login forms */
@@ -240,14 +241,29 @@ body {
   margin-top: 1.3rem;
 }
 
-.services{
+.service-menu-heading{
   grid-column: 2/10;
   grid-row: 3/4;
-  /* background-color: #333; */
-  min-height: 3rem;
+}
+
+.service-menu-heading h2{
+  text-align: center;
+  margin-top: .3rem;
+  padding: 2rem 0 .8rem 0;
+  font-size: 3rem;
+  color:#311b92;
+  font-weight: bolder;
+}
+
+.services{
+  grid-column: 2/10;
+  grid-row: 4/5;
   margin-top: 1.3rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-auto-rows: 1fr;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
 .service-wrapper{
@@ -255,20 +271,48 @@ body {
   margin: .3rem;
   border: .2rem solid transparent;
   border-radius: .3rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: .8rem;
+  box-shadow:5px 5px 10px #444;
 }
 
 .services-heading{
   color: #fff;
-  padding: .3rem;
+  padding: .8rem;
   text-align: center;
+  order: -2;
+  font-size: 1.3rem;
 }
 
-.service-details{
+/* .service-details{
   background-color: yellowgreen;
   padding: 1rem;
+} */
+
+.service-btn{
+  padding:1.3rem;
+  align-self: center;
+  margin: 1rem 0;
+  width: 18rem;
+  border-radius: .6rem;
+  letter-spacing: .1rem;
+  font-size: 1.6rem;
+  background: linear-gradient(to right,rgba(0,255,0,0.2),rgba(0,255,0,0.8));
+  border: .1rem solid #777;
+}
+
+.service-wrapper img{
+   max-width: 100%;
+   max-height:250px;
+   object-fit: cover;
+   flex: 1;
+   order: -1;
 }
 
 .price{
   text-align: center;
+  font-size: 2rem;
+  color: #fff;
 }
 /* end of signup login forms */
